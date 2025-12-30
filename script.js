@@ -10,9 +10,9 @@
     };
 
     const VALIDATORS = {
-        name: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
-        email: /^[^s@]+@[^s@]+.[^s@]+$/,
-        phone: /^[ds+-()]{10,20}$/,
+        name: /^[a-zA-ZÀ-ÿ\s-']{2,50}$/,
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        phone: /^[\d\s+\-()]{10,20}$/,
         message: /^.{10,}$/
     };
 
@@ -445,7 +445,7 @@
         constructor() {
             this.sections = [];
             this.links = [];
-            this.init();
+           	this.init();
         }
 
         init() {

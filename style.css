@@ -191,6 +191,7 @@ img, svg, video {
   padding-left: calc(var(--space-lg) * 0.5);
   padding-right: calc(var(--space-lg) * 0.5);
   margin-bottom: var(--space-lg);
+  width: 100%;
 }
 
 [class*="col"] {
@@ -542,9 +543,7 @@ a:focus {
   margin-bottom: var(--space-xl);
 }
 
-.bg-dark {
-  background-color: var(--color-dark) !important;
-}
+
 
 .bg-light {
   background-color: var(--color-lighter) !important;
@@ -1368,5 +1367,22 @@ address {
   .card, .c-card {
     border: 1px solid #ccc !important;
     box-shadow: none !important;
+  }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }
